@@ -4,3 +4,10 @@ console.log(1+2+"2")
 
 console.log(+true)
 console.log(+"")
+
+//increment (++) operator increments its operand and returns
+// the value before or after the increment
+/* x++ => first return value then increment value
+++x => first increment value then return value
+//the increment operator increments and returns the value before incrementing.
+ */
