@@ -17,9 +17,16 @@ function handleObject(anyObject){
     return `username is ${anyObject.name} and age is ${anyObject.age}` ;
 }
 //console.log(handleObject(user));
-console.log(handleObject(
-    {
-       name:"Shiva",
-       age:33 
-    }
-))
+// console.log(handleObject(
+//     {
+//        name:"Shiva",
+//        age:33 
+//     }));
+
+
+//passing an array to a function
+const  rollNo = [89,367,56,67,56,67];
+function getSecondValue(getArray){
+    return getArray[1];
+}
+console.log(getSecondValue(rollNo));
