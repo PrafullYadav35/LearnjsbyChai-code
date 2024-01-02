@@ -11,7 +11,7 @@ const course ={
 // console.log(course.price);
 
 
-// destructing method
+// destructing mens   arrays ki values ko ya object ki properties ko extract krke  variable me assign krna 
 // const {coursename}=course
 // console.log(coursename)
 
