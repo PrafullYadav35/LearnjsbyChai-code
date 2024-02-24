@@ -8,7 +8,7 @@ const newNum =myNum
               .map((num)=>num+1)
               .filter((num)=>num>=40)
 
-console.log(newNum);
+console.log(newNum);  //output: [41, 51, 61, 71, 81, 91]
 //explain this after watching lecture 
 //NOTE:
 
