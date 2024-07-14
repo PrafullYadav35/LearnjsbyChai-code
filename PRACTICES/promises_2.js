@@ -36,7 +36,7 @@ let deliveryPackage = new Promise(
         else{
             reject("Sorry parcel is rejected due to some issue");
         }
-    },10000);            //10 second bad execute hoga 
+    },10000);            //10 second bad execute hoga  
    } 
 )
 
