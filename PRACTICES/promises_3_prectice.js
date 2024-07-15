@@ -51,6 +51,8 @@ promiseThree
 // create promiseFour catch and finally method use 
 //krna ; 34line  - 54 line
 
+
+/*
 const  promiseFour = new Promise((resolve,reject)=>{
     setTimeout(()=>{
         let error = false;
@@ -82,3 +84,44 @@ console.log(eroor);
     console.log("The promise is either resolved or rejected");
 }
 )
+
+*/
+
+
+// create promisefive ; and consume by Async and Await ;57- 77
+/*
+const promiseFive = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    let error = false;
+    if(!error){
+        resolve({username:"javascript",password:"1369"})
+    }else{
+        reject("ERROR: Js went wrong")
+    }
+  },2000)
+});
+
+async function consumePromiseFive(){
+    try{
+       const response = await promiseFive
+       console.log(response);
+    }catch(error){
+      console.log(error);
+    }
+}
+
+consumePromiseFive()
+*/
+
+//
+async function getAllUsers(){
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/users') // fetch data
+    
+            const data = await response.json()  // convertion promise into json
+            console.log(data);
+        } catch (error) {
+            console.log("E: ", error);
+        }
+    }
+    
