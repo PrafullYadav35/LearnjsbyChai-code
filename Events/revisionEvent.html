@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event 1</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+
+   <script>
+   // document.getElementById('owl').onclick=function(){
+        //alert("Owl clicked");
+    //}
+
+       // attachEvent()
+    // jQuery - on
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    //  document.getElementById('images').addEventListener('click',function(e){
+    //   console.log("click inside ul");
+
+    // },false)
+
+    document.getElementById('owl').addEventListener('click',function(e){
+        console.log('owl is clicked');
+       // e.stopPropagation();
+    })
+    //e.stopPropagation();
+    // prevents further propagation of the current event in the capturing and bubbling phases.
+
+    //preventDefault() 
+    //The preventDefault() method can be used to prevent the default action of any event.
+    // For example, you could use it to prevent a link from being followed, 
+    //or to prevent a form from being submitted.
+     
+    document.getElementById('google').addEventListener('click',function(e){
+        console.log("google clicked");
+         e.preventDefault();
+        //e.stopPropagation();
+    
+    })
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName =="IMG"){
+           console.log(e.target.id);
+           let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+    })
+
+   </script>
+    
+</body>
+</html>
+
+<!--   
+JavaScript Events
+|
+|-- What are Events?
+|   |-- Actions or occurrences in the browser
+|   |-- Examples: click, load, submit
+|
+|-- Common Event Types
+|   |-- Mouse Events
+|   |   |-- click, dblclick, mousedown, mouseup, mouseover, mouseout, mousemove
+|   |-- Keyboard Events
+|   |   |-- keydown, keypress, keyup
+|   |-- Form Events
+|   |   |-- submit, change, focus, blur
+|   |-- Window Events
+|       |-- load, resize, scroll, unload
+|
+|-- Event Listeners
+|   |-- addEventListener()
+|   |-- Example:
+|       |-- document.getElementById('myButton').addEventListener('click', function() { 
+         alert('Button clicked!'); });
+|
+|-- Event Object
+|   |-- Provides event information
+|   |-- Properties: type, target, currentTarget, clientX, clientY, keyCode
+|   |-- Example:
+|       |-- document.getElementById('myButton').addEventListener('click', function(event) { 
+           console.log('Event type:', event.type); });
+|
+|-- Event Propagation
+|   |-- Capturing Phase
+|   |-- Bubbling Phase
+|   |-- Stopping Propagation: event.stopPropagation()
+|   |-- Example:
+|       |-- document.getElementById('child').addEventListener('click', function(event) { 
+         event.stopPropagation(); alert('Child clicked'); });
+|
+|-- Prevent Default Behavior
+|   |-- event.preventDefault()
+|   |-- Example:
+|       |-- document.getElementById('myLink').addEventListener('click', function(event) { 
+         event.preventDefault(); alert('Link click prevented'); });
+|
+|-- Delegation
+    |-- Attach event to parent
+    |-- Handle events for multiple child elements
+    |-- Example:
+        |-- document.getElementById('parent').addEventListener('click', function(event) {
+         if (event.target && event.target.matches('li.item')) { alert('List item clicked: ' + event.target.textContent); } });
+
+-->
