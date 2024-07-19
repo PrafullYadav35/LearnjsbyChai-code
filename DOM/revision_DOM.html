@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn DOM </title>
+</head>
+<body style="background-color: #212121; color: #fff; ">
+    <script>
+        const div= document.createElement('div');
+        //console.log(div);
+        document.body.appendChild(div);
+       // The classList property returns the CSS classnames of an element
+        div.className='main';
+        //console.log(div.classList);
+        //The id property sets or returns the value of an element's id attribute
+        div.id = Math.round(Math.random()*10+1);
+        //  console.log(div.id);
+
+        div.setAttribute('tittle','generated tittle');
+        //element.setAttribute(name, value)
+         div.style.backgroundColor='green';
+         div.style.padding="16px";
+
+        const addText =document.createTextNode("Chai aur code for react");
+        
+        addText.textContent=" hello Everyone how are  you";
+        
+        div.appendChild(addText);
+
+        
+    </script>
+    
+</body>
+</html>
+<!--
+
+ MINDMAP
+|-- Accessing the DOM
+|   |-- document.getElementById()
+|   |-- document.getElementsByClassName()
+|   |-- document.getElementsByTagName()
+|   |-- document.querySelector()
+|   |-- document.querySelectorAll()
+|
+|-- Manipulating the DOM
+|   |-- Changing Content
+|   |   |-- element.innerHTML
+|   |   |-- element.textContent
+|   |-- Changing Attributes
+|   |   |-- element.setAttribute()
+|   |   |-- element.getAttribute()
+|   |   |-- element.removeAttribute()
+|   |-- Changing Styles
+|   |   |-- element.style.property = value
+|   |-- Adding/Removing Elements
+|   |   |-- document.createElement()
+|   |   |-- element.appendChild()
+|   |   |-- element.removeChild()
+|   |   |-- element.insertBefore()
+|   |-- Event Handling
+|       |-- element.addEventListener()
+|       |-- element.removeEventListener()
+|
+|-- Traversing the DOM
+|   |-- Parent Node
+|   |   |-- element.parentNode
+|   |-- Child Nodes
+|   |   |-- element.childNodes
+|   |   |-- element.children
+|   |-- Sibling Nodes
+|       |-- element.nextSibling
+|       |-- element.previousSibling
+|       |-- element.nextElementSibling
+|       |-- element.previousElementSibling
+-->
