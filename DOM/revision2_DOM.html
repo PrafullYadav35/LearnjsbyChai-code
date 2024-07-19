@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+</head>
+<body style="background-color: #212121; color: #fff; ">
+    <ul class="language">
+        <li>Javacsript</li>
+    </ul>
+    
+
+    <script>
+        //ek aisa function jo li tag create krke append kre ul tag me
+        function addLanguage(langName){
+            const li = document.createElement('li');
+            li.innerHTML=`${langName}`;
+            const ul = document.querySelector('.language');
+            ul.appendChild(li);
+
+        }
+        addLanguage("Python");
+
+        addLanguage("java");
+        addLanguage("Typescript");
+
+       // yha is function me kewal innerHTML ki jagah createTextNode ka use hua hai
+        function addOptiLanguage(langName){
+            const li = document.createElement('li');
+            const ul = document.querySelector('.language');
+            li.appendChild(document.createTextNode(`${langName}`));
+            ul.appendChild(li);
+        }
+        
+
+        addOptiLanguage('Golang');// not workin why 
+        addOptiLanguage('Swift');
+        //task: create Text node and innerHTML me difference
+
+
+    //   //Edit
+
+    //   //:nth-child(2): Specifies that we want to target the second child element within its parent. 
+    //  
+
+     const secondLang = document.querySelector("li:nth-child(2)");
+      //In this case, it selects the second <li> element among its siblings.
+      console.log(secondLang);
+
+      const fifthLang = document.querySelector("li:nth-child(5)");
+      console.log(fifthLang.innerHTML);
+
+      const firstLang = document.querySelector("li:first-child");
+      console.log(firstLang.innerHTML);
+      const lastLang =  document.querySelector("li:last-child");
+      console.log(lastLang.innerHTML);
+
+      
+    </script>
+</body>
+</html>
