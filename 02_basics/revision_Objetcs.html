@@ -1,0 +1,92 @@
+<!-- Lec -1 
+ * Object create krna , aceess krna and update krna 
+ * dot notation and Square Bracket notation 
+ * Symbol data type ko declare krke object me as akey use krna and phir access krna 
+ * Object ko freeze krna 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Revision</title>
+</head>
+<body>
+    <script>
+
+     const X  = Symbol("Twitter");
+      let obj1 = {
+        name:'Prafull Kumar Yadav',
+        age:22,
+        work:"finding his spesific skill",
+        wants:'make money in next three year',
+        no:35,
+        // using symbol as a key
+        [X]:'Symbol of Twitter',
+        greet:()=>{
+            console.log("Namste UP valo , Aur kya hal chal hai !");
+        }
+      }
+    //   console.log(obj1.name);
+    //   console.log(obj1["wants"]);
+      //accesing symbol
+    //   console.log(obj1[X]);
+    //   console.log(typeof(obj1[X]));
+
+     // Object.freeze(obj1);
+      obj1.name="Surya Kumar Yadav";
+      // console.log(obj1.name);
+      // console.log(obj1.greet());
+
+      // Object lec 1 yha pr complete hua 
+      //lec 2 ; Objects Methods , combining of Object
+
+      const tinderUser = {};
+      tinderUser.id='user543';
+      tinderUser.name="Jay Sah";
+      tinderUser.isLoggin = 'false';
+
+     // console.log(tinderUser);
+
+  const regulerUser={
+    email:"kprafullya@google.com",
+    fullname:{
+        userfullname:{
+            firstname:"Prafull Kumar",
+            lastname:"Yadav"
+
+        }
+    }
+
+}
+// acess Prafull Kumar
+//console.log(regulerUser.fullname.userfullname.firstname);
+
+
+//object combining
+
+const shyam ={salary:'300K',live:"Mumbai",love:"travel,singing,buisiness",age:28};
+const radaha ={live:'Varansi',love:"Spritual,Entreprenuer",age:26,occupation:"run a startup on Torism"};
+
+const shyam_Meet_radha= Object.assign({},shyam,radaha);
+//console.log(shyam_Meet_radha);
+// assign does not assign coomon propert to first object 
+
+const shyam_Meet_radha_2 ={...shyam,...radaha};
+//console.log(shyam_Meet_radha_2);
+// spread operator bhi same property ko dono alag object se copy nyi kr rha hai 
+//used to copy properties from one object to another. When copying properties from multiple objects,
+// if there are properties with the same name, the property from the last object in the 
+// list will overwrite the property from the previous objects.
+
+
+//hasOwnProperty() method
+
+//console.log(shyam.hasOwnProperty('salary'));
+
+console.log(Object.keys(shyam));      //return array
+console.log(Object.values(radaha));    // retuen array 
+console.log(Object.entries(radaha));
+    </script>
+</body>
+</html>
