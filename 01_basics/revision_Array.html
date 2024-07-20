@@ -1,0 +1,101 @@
+<!--
+NOTES:
+Array Methods
+
+1. shift() and unshift() : - unshift() method adds a new element to an array (at the beginning)
+2. myArray.includes(19) :- check krta array me element hai ki nhi 
+3.myArray.indexOf() : index btata hai elemnt ka 
+4.myArray.join(); :- convert arry into strings 
+5. slice() and splice() ;- return subarry(part of array ) of arra and splice last vala nuber bhi 
+include krta 
+slice make a copy of array but splice real arrray pr task perform krta hai
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document </title>
+</head>
+<body>
+    
+    <script>
+        // map function ek function as a argumnet leta hai and us function ko 
+        // arr ke each element pr apply krta hai 
+        //Creates a new array with the results of calling a function on every element
+        /*
+        let arr=[1,2,4,6,8,10];
+        let newArr=  arr.map(
+            function(arg){
+                return arg*10;
+            }
+        );
+        */
+       // alert(newArr);
+
+
+        //filter : take input a function and usko us elemnt pr apply krta jo condition ko 
+        // match kre yani filter krne ke kam 
+        //filter(): Creates a new array with all elements that pass a test
+        /*
+        const foods = ['lichi','mango','samosa','Banana','Paneer','Milk','Blackberry','Curd','Rice',];
+        const onlyFruits = foods.filter(
+            function(arg){
+                return arg.includes('lich');
+            }
+        );
+        alert(onlyFruits);
+        */
+
+const class_hewett= ["Shivam srivastwa ","Abhisek Yadav", "Chetan ","PratikmSahoo"];
+const class_abic = ["Akash Singh","Ahisek","Sarvagya","Sonal Singhal"];
+//const new1 = class_hewett.push(class_abic);  //cocatation of array
+// console.log(class_hewett);  
+// isme arraye ke undar array aaa ja rha hai 
+
+
+//let newArr2 = class_hewett.concat(class_abic);
+// console.log("newArr2 is  "+newArr2);
+// console.log("class Hewett  " + class_hewett);
+
+//create a new array throgh spread operator
+// const all_friend = [...class_hewett,...class_abic];
+// console.log(all_friend);
+
+//ek array ke element ko dusre Array me dalna 
+//Creates a new array with all sub-array elements concatenated
+// into it recursively up to the specified depth
+let arr = [1, [2, [3, [4]]]];
+let result = arr.flat(3);
+//console.log(result); // Output: [1, 2, 3, 4]
+
+// console.log(Array.isArray(class_abic)); //check array hai ya nhi
+
+// console.log(Array.isArray(newArr2));
+// Array.from() => string ko  array me convert krta hai 
+//Creates a new, shallow-copied array instance from an array-like or iterable object.
+
+ //console.log(Array.from("Prafull Kumar Yadav"));
+
+//console.log(Array.from({name:"Surya DADA"}));  //ye line nhi understand hua 
+//intresting // isko btaya nhi kis type ka arry bnana hai
+
+//console.log(Array.of("PINKI","MINKI ","sONI","sINKI"));
+
+//
+
+// aur pdie  Array.is(), Array.from(), Array.of( )  ke bare me
+   </script>
+</body>
+</html>
+
+<!--
+NOTES: 
+concat(): Merges arrays into a new array.
+flat(): Flattens nested arrays up to a specified depth.
+Array.from(): Converts array-like or iterable objects into arrays.
+Array.of(): Creates arrays from arguments.
+Spread Operator (...): Expands iterables into individual elements/arguments
+-->>
