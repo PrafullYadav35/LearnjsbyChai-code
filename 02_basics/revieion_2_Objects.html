@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Destructing of objects
+    const course ={
+    coursename:"Javascript + React ",
+    price:"free",
+    courseinstructer:"Prafull"
+
+};
+
+//Destructuring is a convenient way of extracting multiple values
+// from data stored in objects and arrays. 
+//This makes it easier to work with complex data structures by
+// allowing you to unpack values into distinct variables.
+
+
+
+
+
+// const {coursename, price,courseinstructer} = course
+// console.log(coursename+" "+price+" "+courseinstructer);
+course;
+
+//variable renaming 
+
+// const {coursename: name , price: value} =course;
+// console.log(name);
+// console.log(value);
+
+//using rest operater
+
+const {coursename:name, ...rest}= course;
+console.log(name);
+console.log(rest);   // return object 
+    </script>
+</body>
+</html>
