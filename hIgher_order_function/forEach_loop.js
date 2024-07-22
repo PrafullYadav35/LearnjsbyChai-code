@@ -19,7 +19,7 @@ coding.forEach((val)=>{
 function printMe(item){
     console.log(item);
 }
-//coding.forEach(printMe)
+//coding.forEach(printMe)   //Note: function ka reference dena hai function ko execute{function()} nhi krna hai
 
 coding.forEach((item, index, arr)=>{
     //console.log(item, index , arr);
