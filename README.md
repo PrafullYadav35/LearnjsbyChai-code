@@ -1,2 +1,2 @@
 # LearnjsbyChai-code
-practice js before learn React Js
+Js Assigments and notes by following chai aur js YT series
